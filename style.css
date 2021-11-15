@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap');
+
+/* 
+==========
+Variables
+==========
+*/
+
+:root {
+  --clr-primary-pale: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-very-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-very-dark-blue: hsl(223, 47%, 23%);
+  --clr-black: #222;
+  --clr--mainWhite: #f7f7f7;
+  --spacing: 0.25rem;
+  --radius: 10px;
+  --transition: all 0.3s linear;
+}
+
+/* 
+============
+GLOBAL VARIABLES
+============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Red Hat Display';
+  color: var(--clr-black);
+  background: var(--clr--mainWhite);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1.2rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  margin-bottom: 0;
+}
+p {
+  font-weight: 300;
+  font-size: 0.7rem;
+  line-height: 2;
+}
+/* btn */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  border: 3px solid var(--clr-very-dark-blue);
+  color: var(--clr-bright-blue);
+  margin: 3rem;
+  transition: var(--transition);
+}
+.btn:hover {
+  background: var(--clr-very-dark-blue);
+  color: #fff;
+}
+
+/* HOME NAV */
+
+.main-nav {
+  background: var(--clr-primary-pale);
+  padding: 0 2rem;
+}
+.main-nav ul {
+  list-style: none;
+}
+.main-nav a {
+  color: var(--clr-very-dark-blue);
+  text-transform: capitalize;
+  display: block;
+  padding: 1rem 0;
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+}
+.main-nav a:hover {
+  color: #fff;
+}
+@media screen and (min-width: 992px) {
+  .main-nav ul {
+    max-width: 1170px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .main-nav li {
+    text-align: center;
+  }
+}
+
+/* 
+HERO PAGE
+ */
+.hero-container {
+  min-height: 100vh;
+  background: var(--clr-bright-blue);
+  display: grid;
+  place-items: center;
+  color: white;
+}
+
+.hero-banner h1 {
+  font-size: 5rem;
+  width: 80%;
+  max-width: 700px;
+}
+.hero-banner p {
+  font-size: 1rem;
+  width: 80%;
+  max-width: 560px;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-banner {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+      url('./img/hero-landing-img.jpeg') center/cover no-repeat;
+  }
+}
